@@ -1,0 +1,289 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button"
+            android:text="连接下位机"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/textDevice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5sp"
+            android:gravity="right|center_vertical"
+            android:text="未连接设备"
+            android:textColor="#ff0000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textRealTem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/text"
+            android:gravity="center"
+            android:text="实际温度\n000" />
+
+        <TextView
+            android:id="@+id/textRealHum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/text"
+            android:gravity="center"
+            android:text="实际湿度\n000" />
+
+        <TextView
+            android:id="@+id/textRealIrr"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/text"
+            android:gravity="center"
+            android:text="实际光照\n000" />
+
+        <TextView
+            android:id="@+id/textRealSmo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/text"
+            android:gravity="center"
+            android:text="烟雾浓度\n000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textCmdTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="最近指令发送时间\n00.00 00：00：00"
+            android:textColor="#1fded9"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textRevTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:gravity="center"
+            android:text="最近数据接收时间\n00.00 00：00：00"
+            android:textColor="#1fded9"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textSetTem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@drawable/text"
+                android:gravity="center_horizontal"
+                android:text="设定温度\n0" />
+
+            <SeekBar
+                android:id="@+id/seekSetTem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressDrawable="@drawable/po_seekbar"
+                android:thumb="@drawable/detail_icon_schedule_ball"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textSetHum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@drawable/text"
+                android:gravity="center_horizontal"
+                android:text="设定湿度\n0" />
+
+            <SeekBar
+                android:id="@+id/seekSetHum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressDrawable="@drawable/po_seekbar"
+                android:thumb="@drawable/detail_icon_schedule_ball"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textSetIrr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@drawable/text"
+                android:gravity="center_horizontal"
+                android:text="设定光照\n0" />
+
+            <SeekBar
+                android:id="@+id/seekSetIrr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressDrawable="@drawable/po_seekbar"
+                android:thumb="@drawable/detail_icon_schedule_ball"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textSetSmo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@drawable/text"
+                android:gravity="center_horizontal"
+                android:text="烟雾浓度\n0" />
+
+            <SeekBar
+                android:id="@+id/seekSetSmo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100" 
+                android:progressDrawable="@drawable/po_seekbar"
+                android:thumb="@drawable/detail_icon_schedule_ball"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnSendCmd"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="发送设定参数"
+            android:textColor="#ffffff" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ter" >
+
+            <TextView
+                android:id="@+id/textChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="终端"
+                android:isScrollContainer="true"
+                android:text="" >
+            </TextView>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editContent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1sp"
+            android:layout_weight="4"
+            android:background="@drawable/edit_text"
+            android:hint="发送内容"
+            android:text=""
+            android:textColor="#1fded9" />
+
+        <Button
+            android:id="@+id/btnSendMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1sp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="发送"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>
